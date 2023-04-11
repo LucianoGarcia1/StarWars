@@ -1,0 +1,47 @@
+.c-content {
+  @include flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  @media screen and (max-width: 550px) {
+      gap: 0.5rem;
+  }
+
+  .box {
+    text-decoration: none;
+    max-width: 250px;
+    width: 100%;
+    background-color: $blackBig;
+    border-radius: 4px 4x 0px 0px;
+    padding-bottom: 0.5rem;
+
+    @media screen and (max-width: 800px) {
+      max-width: 200px;
+    }
+    @media screen and (max-width: 550px) {
+      max-width: 170px;
+    }
+
+    img {
+      width: 100%;
+      height: 20rem;
+      border-radius: 4px 4px 0px 0px;
+      object-fit: cover;
+
+      @media screen and (max-width: 800px) {
+        height: 15rem;
+      }
+      
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: normal;
+      text-align: center;
+      color: $yellow;
+    }
+  }
+}

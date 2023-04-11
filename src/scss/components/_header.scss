@@ -1,0 +1,84 @@
+.c-header{
+    width: 100%;
+    padding: 1rem 2rem;
+    @include flex;
+
+    .nav{
+        .menu{
+            @include flex;
+            gap: 1rem;
+            list-style: none;
+
+            li{
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    font-size: $small;
+                    @include flex;
+                    gap: 0.5rem;
+                    transition: all .5s;
+
+                    &.active{
+                        color: $yellow;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 720px){
+                &{
+                    display: none;
+                }
+            }
+
+        }
+
+        .btnMenu{
+            display: none;
+            cursor: pointer;
+            padding: 1rem;
+            font-size: $medium;
+            border: none;
+            background-color: transparent;
+            color: $yellow;
+        }
+
+        @media screen and (max-width: 720px){
+            .menu{
+                display: none;
+            }
+            .btnMenu{
+                display: block;
+            }
+            .ativo{
+                @include flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: $white;
+                padding: 2rem;
+                z-index: 1000;
+                height: 100vh;
+
+                li{
+                    a{
+                        color: $black;
+                    }
+                }
+                button{
+                    padding: 0;
+                    min-width: 50px;
+                    min-height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $black;
+                    border-radius: 50%;
+                    position: absolute;
+                    bottom: 100px;
+                }
+            }
+        }
+    }
+}
